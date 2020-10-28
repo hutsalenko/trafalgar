@@ -1,0 +1,232 @@
+@import "../../ScssComponent/variables";
+@import "../../ScssComponent/mixins";
+
+.header {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 19rem;
+  margin-top: 5.6rem;
+  position: relative;
+
+  &__menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8.4rem;
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
+
+    &--logo {
+      display: flex;
+      margin-right: 3rem;
+
+      @media (max-width: 500px) {
+        margin-right: 0;
+        margin-bottom: 2rem;
+      }
+
+      &-photo {
+        @include mulish-700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4.1rem;
+        height: 4.1rem;
+        font-size: 2.6rem;
+        text-transform: uppercase;
+        border-radius: 50%;
+        background-color: #458ff6;
+        color: #fff;
+        margin-right: 1.2rem;
+      }
+
+      &-title {
+        @include mulish-700;
+        font-size: 2.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &--nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media (max-width: 500px) {
+        flex-direction: column;
+      }
+
+      a {
+        @include mulish-400;
+        text-decoration: none;
+        font-size: 1.8rem;
+        color: $text-secondary;
+
+        @media (max-width: 822px) {
+          font-size: 1.5rem;
+        }
+
+        &:not(:last-child) {
+          margin-right: 4rem;
+
+          @media (max-width: 822px) {
+            margin-right: 3rem;
+          }
+
+          @media (max-width: 708px) {
+            margin-right: 2rem;
+          }
+        }
+
+        &:hover {
+          color: $text-dark;
+          @include mulish-700;
+        }
+
+        &:focus {
+          color: $text-dark;
+          @include mulish-700;
+        }
+      }
+    }
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
+
+    &--text {
+      max-width: 44.5rem;
+      width: 100%;
+      margin-right: 5rem;
+
+      @media (max-width: 500px) {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      &-title {
+        @include mulish-700;
+        font-size: 4.8rem;
+        color: $text-dark;
+        margin-bottom: 2.5rem;
+
+        @media (max-width: 1173px) {
+          font-size: 3.8rem;
+        }
+
+        @media (max-width: 775px) {
+          font-size: 2.8rem;
+        }
+      }
+
+      &-subtitle {
+        @include mulish-300;
+        font-size: 2.1rem;
+        color: $text-secondary;
+        margin-bottom: 4.5rem;
+
+        @media (max-width: 1173px) {
+          font-size: 1.5rem;
+        }
+
+        @media (max-width: 775px) {
+          font-size: 1.3rem;
+        }
+      }
+
+      &-btn {
+        @include mulish-700;
+        font-size: 1.8rem;
+        width: 20rem;
+        height: 6rem;
+        border-radius: 4rem;
+        outline-style: none;
+        color: $text-white;
+        background-color: #458ff6;
+        border: 1px solid #458ff6;
+
+        @media (max-width: 1173px) {
+          font-size: 1.3rem;
+          width: 13rem;
+          height: 4rem;
+        }
+
+        &:hover {
+          background-color: #1b70e7;
+        }
+        &:active {
+          background-color: #1b70e7;
+          box-shadow: 0 0 6px 4px #1b70e7;
+        }
+      }
+    }
+
+    &--img {
+      max-width: 69.3rem;
+      width: 100%;
+      height: auto;
+
+      @media (max-width: 1305px) {
+        max-width: 59.3rem;
+      }
+
+      @media (max-width: 1173px) {
+        max-width: 49.3rem;
+      }
+
+      @media (max-width: 967px) {
+        max-width: 39.3rem;
+      }
+
+      @media (max-width: 775px) {
+        max-width: 29.3rem;
+      }
+    }
+  }
+
+  &__wraper {
+    position: absolute;
+    left: -12%;
+    top: 20%;
+    display: grid;
+    grid-template-columns: repeat(5, 1rem);
+    grid-template-rows: repeat(5, 1rem);
+    grid-gap: 1.9rem;
+
+    @media (max-width: 1173px) {
+      left: -5%;
+      top: 25%;
+      grid-template-columns: repeat(3, 1rem);
+      grid-template-rows: repeat(3, 1rem);
+      grid-gap: 1.9rem;
+    }
+
+    @media (max-width: 967px) {
+      grid-template-columns: repeat(2, 1rem);
+      grid-template-rows: repeat(2, 1rem);
+      grid-gap: 1.9rem;
+    }
+
+    & > div {
+      background-color: #458ff6;
+      opacity: 0.5;
+      border-radius: 50%;
+    }
+  }
+}
